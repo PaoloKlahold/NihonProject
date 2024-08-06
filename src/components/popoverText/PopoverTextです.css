@@ -1,0 +1,90 @@
+.popover-container {
+  position: relative;
+  display: inline-block;
+}
+
+.popover-text {
+  cursor: pointer;
+}
+
+.popover {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.65); /* Cinza escuro transparente */
+  color: #fff; /* Letra branca */
+  border: 1px solid #cccccc00;
+  padding: 10px;
+  z-index: 1000;
+  white-space: nowrap;
+}
+
+.popover.N {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 10px; /* Puxado para baixo */
+}
+
+.popover.N::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid rgba(0, 0, 0, 0.65); /* Cinza escuro transparente */
+}
+
+.popover.S {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px; /* Puxado para cima */
+}
+
+.popover.S::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid rgba(0, 0, 0, 0.65); /* Cinza escuro transparente */
+}
+
+.popover.E {
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 10px; /* Puxado para a direita */
+}
+
+.popover.E::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  transform: translateY(-50%);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid rgba(0, 0, 0, 0.65); /* Cinza escuro transparente */
+}
+
+.popover.W {
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 10px; /* Puxado para a esquerda */
+}
+
+.popover.W::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  transform: translateY(-50%);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid rgba(0, 0, 0, 0.65); /* Cinza escuro transparente */
+}
